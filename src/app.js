@@ -155,3 +155,5 @@ export function createViewer(container, proxyConfig = null) {
     },
   };
 }
+
+export const eventBus = new Vue();

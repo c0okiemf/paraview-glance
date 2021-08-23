@@ -2,6 +2,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const merge = require('webpack-merge');
+const webpack = require('webpack');
 
 const baseConfig = require('./webpack.base.config');
 
@@ -94,5 +95,6 @@ module.exports = merge.smart(baseConfig, {
       filename: '[name].[contenthash].css',
       ignoreOrder: false,
     }),
+    new webpack.EnvironmentPlugin(['APP_ENV']),
   ],
 });

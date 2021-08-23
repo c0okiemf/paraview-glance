@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const merge = require('webpack-merge');
+const webpack = require('webpack');
 
 const baseConfig = require('./webpack.base.config');
 
@@ -44,7 +45,7 @@ module.exports = merge.smart(baseConfig, {
   },
   devServer: {
     contentBase: baseConfig.output.path,
-    host: HOST || '0.0.0.0',
+    host: HOST || 'localhost',
     port: PORT || 9999,
     disableHostCheck: true,
     hot: false,
@@ -60,5 +61,6 @@ module.exports = merge.smart(baseConfig, {
       template: 'static/index.html',
       inject: false,
     }),
+    new webpack.EnvironmentPlugin(['APP_ENV']),
   ],
 });

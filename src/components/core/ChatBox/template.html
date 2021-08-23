@@ -1,0 +1,30 @@
+<div v-if="messages" :class="[$style.container, ...(isDarkMode ? [$style.dark] : [])]">
+    <div :class="$style.chatBox" v-if="!folded">
+        <div :class="$style.headerSection">
+            <div :class="$style.header">Support</div>
+            <img src="close.svg" :class="$style.hideChatImg" @click="handleToggleFolded">
+        </div>
+        <div :class="$style.messagesSection" ref="messagesSection">
+            <div 
+                v-for="message in messages" 
+                :key="message._id" 
+                :class="[
+                    $style.message,
+                    ...(message.fromUserName !== 'admin' ? [$style.me] : []),
+                ]"
+            >
+                {{message.content}}
+                <div :class="$style.timestamp">{{message.timestamp}}</div>
+            </div>
+        </div>
+        <div :class="$style.inputSection">
+           <input type="text" :class="$style.input" placeholder="Type your message" v-model="userMessage" v-on:keyup.enter="handleSubmit" />
+           <button @click="handleSubmit" :class="$style.sendButton">
+               <img :class="$style.sendButtonImg" src="send.svg">
+            </button>
+        </div>
+    </div>
+    <div v-if="folded">
+        <img src="chat.svg" :class="$style.showChatButton" @click="handleToggleFolded">
+    </div>
+</div>

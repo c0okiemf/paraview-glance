@@ -16,6 +16,8 @@ import StateFileGenerator from 'paraview-glance/src/components/core/StateFileGen
 import SvgIcon from 'paraview-glance/src/components/widgets/SvgIcon';
 import CollapsibleToolbar from 'paraview-glance/src/components/widgets/CollapsibleToolbar';
 import CollapsibleToolbarItem from 'paraview-glance/src/components/widgets/CollapsibleToolbar/Item';
+import Chat from 'paraview-glance/src/components/core/Chat';
+import ThemeToggle from 'paraview-glance/src/components/core/ThemeToggle';
 
 import shortcuts from 'paraview-glance/src/shortcuts';
 
@@ -28,6 +30,7 @@ export default {
   components: {
     AboutBox,
     BrowserIssues,
+    Chat,
     CollapsibleToolbar,
     CollapsibleToolbarItem,
     ControlsDrawer,
@@ -39,6 +42,7 @@ export default {
     Screenshots,
     StateFileGenerator,
     SvgIcon,
+    ThemeToggle,
     VBottomSheet,
     VDialog,
   },
