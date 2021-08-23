@@ -1,0 +1,125 @@
+.container .showChatButton {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+    height: 60px;
+    width: 60px;
+}
+.container.dark .showChatButton {
+    filter: invert(1);
+}
+
+.container .chatBox {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 400px;
+    z-index: 100;
+    height: 500px;
+    background-color: white;
+    border-radius: 5px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.container.dark .chatBox {
+    background-color: #131415;
+}
+
+.container .headerSection {
+    width: 100%;
+    background-color: lavender;
+    border-radius: 5px 0 0 0;
+    padding: 20px;
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+}
+.container.dark .headerSection {
+    background-color: #121212;
+    border-bottom: 1px solid gray;
+}
+
+.header {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    flex: 1;
+}
+
+.container .hideChatImg {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.container.dark .hideChatImg {
+    filter: invert(1);
+}
+
+.messagesSection {
+    width: 100%;
+    padding: 20px;
+    overflow-y: scroll;
+    height: 100%;
+}
+
+.container .message {
+    background-color: lightgray;
+    border-radius: 20px;
+    padding: 5px 15px;
+    width: max-content;
+    margin-bottom: 5px;
+    max-width: 90%;
+    word-break: break-all;
+}
+.container.dark .message {
+    background-color: #22242a;
+}
+
+.container .message.me {
+    margin-left: auto;
+    background-color: lightsteelblue;
+}
+.container.dark .message.me {
+    background-color: #1f7e80;
+}
+
+.container .message .timestamp {
+    font-size: 10px;
+    color: gray;
+    width: 100%;
+    text-align: right;
+}
+.container.dark .message .timestamp {
+    color: #ebedf2;
+}
+
+.container .inputSection {
+    padding: 10px;
+    background-color: lavender;
+    display: flex;
+    align-items: center;
+}
+.container.dark .inputSection {
+    background-color: #121212;
+}
+
+.input {
+    height: 40px;
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px;
+    outline: none;
+}
+
+.sendButton {
+    display: flex;
+    padding-left: 10px;
+}
+
+.sendButtonImg {
+    width: 20px;
+    height: 20px;
+}

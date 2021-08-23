@@ -1,0 +1,8 @@
+<div>
+    <chat-box
+        v-if="connected"
+        :messages="messages"   
+        @new-message="handleSendMessageToAdmin"     
+    />
+</div>
+

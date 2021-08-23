@@ -64,6 +64,11 @@
           :dense="smallScreen"
         >
           <template v-slot:default="{ state }">
+            <collapsible-toolbar-item>
+              <span v-show="state !== 'dense'">
+                <theme-toggle />
+              </span>
+            </collapsible-toolbar-item>
             <collapsible-toolbar-item
               v-on:click="showFileUpload"
               :state="state"
@@ -140,7 +145,7 @@
       <v-dialog v-model="autoloadDialog" persistent width="60%">
         <v-card class="pa-4">
           <v-card-title
-            class="justify-center text-center title black--text pv-break-word"
+            class="justify-center text-center title pv-break-word"
           >
             Loading {{ autoloadLabel }}...
           </v-card-title>
@@ -199,6 +204,8 @@
 
       <!-- portal mount point -->
       <div id="app-portal-mount" />
+
+      <chat />
     </v-app>
   </template>
 </drag-and-drop>

@@ -56,7 +56,11 @@ module.exports = {
         ]
       }],
       // allow debugger during development
-      'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+      'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+      'no-unused-expressions': 0,
+      'no-case-declarations': 0,
+      'default-case': 0,
+      'import/prefer-default-export': 0,
     }
   }
 
